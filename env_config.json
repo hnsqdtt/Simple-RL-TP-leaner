@@ -1,0 +1,19 @@
+{
+  "map": {
+    "source": "generator",
+    "generator_module": "random_map_generator_connected_v3",
+    "generator_kwargs": {
+      "width": 782, "height": 906, "resolution": 0.05, "seed": 42,
+      "robot_clearance_m": 0.35
+    },
+    "min_start_goal_m": 15.0
+  },
+  "limits": { "v_max": 0.8, "omega_max": 1.2, "safety_radius_m": 0.35 },
+  "sim": { "dt": 0.05, "max_steps": 1200, "goal_tolerance_m": 0.25 },
+  "reward": {
+    "w_progress": 1.0, "w_smooth": 0.1, "w_peak": 0.05,
+    "w_safety_margin": 0.5, "w_collision": 50.0, "w_action_cost": 0.01,
+    "no_path_speed_shaping": true, "R_goal": 50.0, "R_timeout": 5.0
+  },
+  "obs": { "mode": "local", "patch_size": [96, 96], "patch_meters": 9.6 }
+}
